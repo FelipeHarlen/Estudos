@@ -1,10 +1,7 @@
-const { resolve } = require("path")
-
-const gerar = (min, max) => {
-    if(min > max){
+function gerar(min, max) {
+    if (min > max) 
         [max, min] = [min, max]
-    }
-    
+
     return new Promise(resolve => {
         const fator = max - min + 1
         const random = parseInt(Math.random() * fator) + min
